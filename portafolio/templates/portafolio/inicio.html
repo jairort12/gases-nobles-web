@@ -1,0 +1,148 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Hero Start -->
+<div class="container-fluid pb-5 hero-header bg-light mb-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-lg-6">
+                <h1 class="display-3 mb-4 animated slideInRight">{% trans "Soluciones Energéticas y" %} <span class="text-primary">{% trans "Sostenibles" %}</span></h1>
+                <h5 class="d-inline-block border border-2 border-primary py-3 px-5 mb-0 animated slideInRight">
+                    {% trans "Impulsando la transición hacia un futuro limpio" %}
+                </h5>
+            </div>
+            <div class="col-lg-6">
+                <!-- Ajuste de altura uniforme para el carrusel -->
+                <div class="owl-carousel header-carousel animated fadeIn">
+                    <img class="img-fluid rounded shadow-sm" src="{% static 'portafolio/img/Bici_2.jpg' %}" alt="Gases Nobles 1" style="height: 400px; width: 100%; object-fit: cover;">
+                    <img class="img-fluid rounded shadow-sm" src="{% static 'portafolio/img/Electro_1.jpeg' %}" alt="Gases Nobles 2" style="height: 400px; width: 100%; object-fit: cover;">
+                    <img class="img-fluid rounded shadow-sm" src="{% static 'portafolio/img/F_cell.jpeg' %}" alt="Gases Nobles 3" style="height: 400px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<!-- About Start -->
+<div class="container-fluid py-5" id="about">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <!-- Imagen 1 -->
+                    <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded shadow-sm w-100" src="{% static 'portafolio/img/Bici_1.jpg' %}" alt="Nosotros 1" style="height: 280px; object-fit: cover;">
+                    </div>
+                    <!-- Imagen 2 -->
+                    <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+                        <img class="img-fluid rounded shadow-sm w-100" src="{% static 'portafolio/img/GASF.jpeg' %}" alt="Nosotros 2" style="height: 280px; object-fit: cover;">
+                    </div>
+                    <!-- Recuadro en la parte inferior abarcando ambas imágenes -->
+                    <div class="col-12 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="bg-primary rounded p-3 text-center shadow-sm">
+                            <h5 class="text-white lh-base mb-0">{% trans "Innovación en Gases Renovables" %}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="mb-4"><span class="text-uppercase text-primary bg-light px-2">{% trans "Nosotros" %}</span></h1>
+                <p class="mb-4">{% trans "En Gases Nobles SAS nos dedicamos al desarrollo de proyectos de ingeniería ambiental y energía renovable, especializándonos en la gestión de gases sostenibles y economía circular." %}</p>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>{% trans "Proyectos a Medida" %}</h6>
+                        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>{% trans "Personal Altamente Calificado" %}</h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>{% trans "Sostenibilidad Garantizada" %}</h6>
+                        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>{% trans "Tecnología de Vanguardia" %}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Dynamic Services Start -->
+<div class="container-fluid py-5 bg-light" id="services">
+    <div class="container py-5">
+        <div class="text-center wow fadeIn" data-wow-delay="0.1s">
+            <h1 class="mb-5">{% trans "Nuestras Áreas de Trabajo" %}</h1>
+        </div>
+        <div class="row g-4">
+            {% for servicio in servicios %}
+            <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+                <div class="service-item h-100 bg-white p-4 rounded shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        {% if servicio.imagen %}
+                            <div class="mb-4 overflow-hidden rounded" style="height: 200px;">
+                                <img class="img-fluid w-100 h-100" src="{{ servicio.imagen.url }}" alt="{{ servicio.nombre }}" style="object-fit: cover;">
+                            </div>
+                        {% endif %}
+                        <h3 class="mb-3">{{ servicio.nombre }}</h3>
+                        <div class="text-muted mb-4">{{ servicio.descripcion|safe|truncatewords_html:20 }}</div>
+                    </div>
+                    <div>
+                        <a href="{% url 'detalle' servicio.identificador %}" class="btn btn-primary w-100">
+                            {% trans "Ver detalles" %} &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="text-muted">{% trans "No hay servicios registrados en este momento." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Dynamic Services End -->
+
+<!-- Contact Start -->
+<div class="container-fluid py-5" id="contact">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <h1 class="mb-4">{% trans "Contáctanos" %}</h1>
+                <p class="mb-4">{% trans "¿Tienes preguntas sobre nuestros servicios o deseas desarrollar un proyecto con nosotros? Envíanos un mensaje y te responderemos a la brevedad." %}</p>
+                <div class="d-flex align-items-center bg-light p-3 rounded mb-3">
+                    <div class="btn-square bg-primary text-white me-3" style="width: 50px; height: 50px;">
+                        <i class="fa fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h5>{% trans "Teléfono" %}</h5>
+                        <span>(+57) 311 228 3313 / (+34) 664 32 1389</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center bg-light p-3 rounded">
+                    <div class="btn-square bg-primary text-white me-3" style="width: 50px; height: 50px;">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h5>{% trans "Correo Electrónico" %}</h5>
+                        <span>gerencia_admin@gasesnobles.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <form method="post" action="{% url 'inicio' %}">
+                        {% csrf_token %}
+                        {{ formulario|crispy }}
+                        <button type="submit" class="btn btn-primary w-100 mt-3 py-3">
+                            {% trans "Enviar Mensaje" %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+{% endblock %}

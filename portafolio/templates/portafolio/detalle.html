@@ -1,0 +1,29 @@
+{% extends 'portafolio/base.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="container py-5">
+    
+    <div class="mb-4">
+        <a href="{% url 'inicio' %}" class="btn btn-outline-secondary">
+            &larr; {% trans "Volver al portafolio" %}
+        </a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-4 p-md-5">
+            <h1 class="text-primary mb-4">{{ servicio.nombre }}</h1>
+
+            {% if servicio.imagen %}
+                <div class="mb-5 text-center">
+                    <img src="{{ servicio.imagen.url }}" alt="{{ servicio.nombre }}" class="img-fluid rounded shadow-sm" style="max-height: 400px; width: 100%; object-fit: cover;">
+                </div>
+            {% endif %}
+
+            <div class="lead text-dark">
+                {{ servicio.descripcion|safe }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+# Archivos de entorno y seguridad
+.env
+db.sqlite3
+
+# Entornos virtuales
+venv/
+env/
+.conda/
+
+# Archivos de Python cacheados
+__pycache__/
+*.pyc
+
+# Archivos subidos por los usuarios (se manejan en el servidor)
+media/

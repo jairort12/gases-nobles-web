@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-22 20:12-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\nucleo\settings.py:123
+msgid "Español"
+msgstr "Spanish"
+
+#: .\nucleo\settings.py:124
+msgid "Inglés"
+msgstr "English"
+
+#: .\portafolio\forms.py:5
+msgid "Tu Nombre"
+msgstr "Name"
+
+#: .\portafolio\forms.py:6
+msgid "Tu Correo"
+msgstr "E-mail"
+
+#: .\portafolio\forms.py:7
+msgid "Mensaje"
+msgstr "Message"
+
+#: .\portafolio\templates\portafolio\base.html:35
+#: .\portafolio\templates\portafolio\base.html:88
+msgid "Inicio"
+msgstr "Home"
+
+#: .\portafolio\templates\portafolio\base.html:36
+#: .\portafolio\templates\portafolio\inicio.html:47
+msgid "Nosotros"
+msgstr "About Us"
+
+#: .\portafolio\templates\portafolio\base.html:37
+msgid "Servicios"
+msgstr "Services"
+
+#: .\portafolio\templates\portafolio\base.html:38
+#: .\portafolio\templates\portafolio\base.html:89
+msgid "Contacto"
+msgstr "Contact Us"
+
+#: .\portafolio\templates\portafolio\base.html:78
+msgid ""
+"Transformando la industria hacia la sostenibilidad y las energías limpias."
+msgstr "Transforming the industry toward sustainability and clean energy."
+
+#: .\portafolio\templates\portafolio\base.html:81
+msgid "Contacto Directo"
+msgstr "Direct Contact"
+
+#: .\portafolio\templates\portafolio\base.html:87
+msgid "Navegación"
+msgstr "Navigation"
+
+#: .\portafolio\templates\portafolio\base.html:95
+msgid "Gases Nobles SAS. Todos los derechos reservados."
+msgstr "Gases Nobles SAS. All rights reserved."
+
+#: .\portafolio\templates\portafolio\detalle.html:9
+msgid "Volver al portafolio"
+msgstr "Back to Portfolio"
+
+#: .\portafolio\templates\portafolio\inicio.html:12
+msgid "Soluciones Energéticas y"
+msgstr "Sustainable Energy"
+
+#: .\portafolio\templates\portafolio\inicio.html:12
+msgid "Sostenibles"
+msgstr "Solutions"
+
+#: .\portafolio\templates\portafolio\inicio.html:14
+msgid "Impulsando la transición hacia un futuro limpio"
+msgstr "Driving the Transition to a Clean Future"
+
+#: .\portafolio\templates\portafolio\inicio.html:41
+msgid "Innovación en Gases Renovables"
+msgstr "Innovation in Renewable Gases"
+
+#: .\portafolio\templates\portafolio\inicio.html:48
+msgid ""
+"En Gases Nobles SAS nos dedicamos al desarrollo de proyectos de ingeniería "
+"ambiental y energía renovable, especializándonos en la gestión de gases "
+"sostenibles y economía circular."
+msgstr ""
+"At Gases Nobles SAS, we are dedicated to developing engineering projects "
+"in the fields of environmental protection and renewable energy, specializing in the management of "
+"sustainable gases and the circular economy."
+
+#: .\portafolio\templates\portafolio\inicio.html:51
+msgid "Proyectos a Medida"
+msgstr "Custom Projects"
+
+#: .\portafolio\templates\portafolio\inicio.html:52
+msgid "Personal Altamente Calificado"
+msgstr "Highly Qualified Staff"
+
+#: .\portafolio\templates\portafolio\inicio.html:55
+msgid "Sostenibilidad Garantizada"
+msgstr "Guaranteed Sustainability"
+
+#: .\portafolio\templates\portafolio\inicio.html:56
+msgid "Tecnología de Vanguardia"
+msgstr "Cutting-Edge Technology"
+
+#: .\portafolio\templates\portafolio\inicio.html:69
+msgid "Nuestras Áreas de Trabajo"
+msgstr "Our Areas of Focus"
+
+#: .\portafolio\templates\portafolio\inicio.html:86
+msgid "Ver detalles"
+msgstr "See details"
+
+#: .\portafolio\templates\portafolio\inicio.html:93
+msgid "No hay servicios registrados en este momento."
+msgstr "There are no services registered at this time."
+
+#: .\portafolio\templates\portafolio\inicio.html:106
+msgid "Contáctanos"
+msgstr "Contact Us"
+
+#: .\portafolio\templates\portafolio\inicio.html:107
+msgid ""
+"¿Tienes preguntas sobre nuestros servicios o deseas desarrollar un proyecto "
+"con nosotros? Envíanos un mensaje y te responderemos a la brevedad."
+msgstr ""
+"Do you have questions about our services or would you like to work on a project "
+"with us? Send us a message and we'll get back to you as soon as possible."
+
+#: .\portafolio\templates\portafolio\inicio.html:113
+msgid "Teléfono"
+msgstr "Phone"
+
+#: .\portafolio\templates\portafolio\inicio.html:122
+msgid "Correo Electrónico"
+msgstr "E-mail"
+
+#: .\portafolio\templates\portafolio\inicio.html:133
+msgid "Enviar Mensaje"
+msgstr "Send Message"
